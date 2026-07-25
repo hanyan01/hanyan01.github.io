@@ -1,0 +1,43 @@
+/*
+  EASY-EDIT SETTINGS
+  Change values in this file to adjust the desktop website.
+  The structural rules stay in style.css and normally do not need editing.
+*/
+
+:root {
+  /* Colors */
+  --background: #ffffff;
+  --surface: #ffffff;
+  --text: #202932;
+  --muted: #66717a;
+  --accent: #163f65;
+  --accent-soft: #dbe5ed;
+  --rule: #d9ddd9;
+
+  /* Fonts */
+  --sans-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --serif-font: Georgia, "Times New Roman", serif;
+  --body-font-size: 16px;
+  --body-line-height: 1.7;
+  --profile-name-size: 2.5rem;
+  --profile-name-alignment: center;
+  --profile-title-size: 0.94rem;
+  --section-heading-size: 2.375rem;
+  --lead-text-size: 1.45rem;
+  --paper-title-size: 1.4rem;
+
+  /* Desktop layout */
+  --minimum-page-width: 980px;
+  --page-width: 1120px;
+  --profile-column-width: 250px;
+  --column-gap: 4.5rem;
+  --page-padding-top: 4.5rem;
+  --page-padding-bottom: 2.5rem;
+  --section-spacing: 5.5rem;
+  --sticky-profile-top: 2.5rem;
+
+  /* Profile photograph */
+  --photo-ratio: 3 / 4;
+  --photo-position: center;
+}

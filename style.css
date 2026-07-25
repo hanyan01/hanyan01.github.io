@@ -1,0 +1,373 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background);
+  color-scheme: light;
+  scroll-behavior: auto;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  min-width: var(--minimum-page-width);
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--sans-font);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  border-radius: 0.15rem;
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 20;
+  padding: 0.6rem 0.85rem;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-shell {
+  display: grid;
+  grid-template-columns: var(--profile-column-width) minmax(0, 1fr);
+  gap: var(--column-gap);
+  width: min(calc(100% - 3rem), var(--page-width));
+  margin: 0 auto;
+  padding: var(--page-padding-top) 0 var(--page-padding-bottom);
+}
+
+.site-shell,
+.profile,
+.profile-inner,
+main,
+.content-section,
+footer {
+  background-color: var(--background);
+}
+
+.profile,
+main {
+  min-width: 0;
+}
+
+.profile-inner {
+  position: sticky;
+  top: var(--sticky-profile-top);
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--photo-ratio);
+  object-fit: cover;
+  object-position: var(--photo-position);
+  background: #e7e7e1;
+  border: 1px solid var(--rule);
+}
+
+.profile-heading {
+  padding: 1.5rem 0 1.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--serif-font);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  margin: 0.2rem 0 0.55rem;
+  font-size: var(--profile-name-size);
+  line-height: 1.12;
+  text-align: var(--profile-name-alignment);
+}
+
+.profile-title,
+.profile-affiliation {
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+}
+
+.profile-title {
+  font-size: var(--profile-title-size);
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.profile-affiliation {
+  color: var(--muted);
+}
+
+.profile-links {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.profile-link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 2.5rem;
+  padding: 0.4rem 0;
+  font-size: 0.91rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.profile-link span:last-child {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.profile-link span.contact-address {
+  color: var(--accent);
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.pending-link {
+  color: var(--text);
+}
+
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.1rem;
+  padding-top: 1.2rem;
+}
+
+.section-nav a {
+  font-size: 0.83rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.content-section {
+  padding: 0 0 var(--section-spacing);
+}
+
+.section-heading {
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--text);
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: var(--section-heading-size);
+  line-height: 1.1;
+}
+
+.lead {
+  max-width: 42rem;
+  margin: 2.5rem 0 2rem;
+  font-family: var(--serif-font);
+  font-size: var(--lead-text-size);
+  line-height: 1.55;
+}
+
+.intro-section .lead {
+  margin-top: 0;
+}
+
+.interest-block,
+.research-group,
+.teaching-grid {
+  margin-top: 2.4rem;
+}
+
+.interest-block h3,
+.subsection-heading h3,
+.teaching-grid h3 {
+  margin-bottom: 0.45rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.placeholder-copy,
+.empty-state {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.interest-copy {
+  margin-bottom: 0;
+}
+
+.research-group + .research-group {
+  margin-top: 4.25rem;
+}
+
+.subsection-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 0.75rem;
+}
+
+.subsection-heading h3,
+.subsection-heading p {
+  margin-bottom: 0;
+}
+
+.subsection-heading p {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.paper-list {
+  border-top: 1px solid var(--rule);
+}
+
+.empty-state {
+  margin: 0;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.paper {
+  padding: 1.65rem 0 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.paper-title {
+  margin-bottom: 0.35rem;
+  font-family: var(--sans-font);
+  font-size: var(--paper-title-size);
+  font-weight: 650;
+  line-height: 1.38;
+}
+
+.paper-authors,
+.paper-status {
+  margin-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.paper-status {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  margin-top: 0.8rem;
+}
+
+.paper-links a,
+details summary {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+details {
+  margin-top: 1rem;
+}
+
+details summary {
+  width: fit-content;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+details p {
+  max-width: 46rem;
+  margin: 0.9rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent-soft);
+  color: var(--muted);
+}
+
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+.teaching-grid section {
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.teaching-institution {
+  margin-bottom: 0.45rem;
+  font-weight: 650;
+}
+
+.teaching-entry + .teaching-entry {
+  margin-top: 1.1rem;
+}
+
+.course-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--text);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
