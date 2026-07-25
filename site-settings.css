@@ -6,13 +6,13 @@
 
 :root {
   /* Colors */
-  --background: #ffffff;
-  --surface: #ffffff;
+  --background: #f9fafb;
+  --surface: #f9fafb;
   --text: #202932;
   --muted: #66717a;
   --accent: #163f65;
   --accent-soft: #dbe5ed;
-  --rule: #d9ddd9;
+  --rule: #dde1e6;
 
   /* Fonts */
   --sans-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,

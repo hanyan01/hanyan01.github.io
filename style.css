@@ -276,8 +276,12 @@ h1 {
 }
 
 .paper {
-  padding: 1.65rem 0 1.5rem;
-  border-bottom: 1px solid var(--rule);
+  padding: 1.9rem 0 1.75rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--rule) 65%, transparent);
+}
+
+.paper:last-child {
+  border-bottom: none;
 }
 
 .paper-title {
