@@ -277,7 +277,7 @@ h1 {
 
 .paper {
   padding: 1.9rem 0 1.75rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--rule) 65%, transparent);
+  border-bottom: 1px solid var(--rule);
 }
 
 .paper:last-child {
